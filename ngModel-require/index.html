@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html data-ng-app="app">
+<head lang="es">
+    <meta charset="UTF-8">
+    <title>nGModel Require</title>
+</head>
+<body>
+    <!-- Inicializando monto-->
+    <div data-ng-init="monto=10"></div>
+    <mi-directiva data-ng-model="monto"></mi-directiva>
+    {{monto | currency}}
+    <script src="http://localhost/angularjs/cdn/angular.min.js"></script>
+    <script src="app.module.js"></script>
+    <script src="mi-directiva/miDirectiva.js"></script>
+</body>
+</html>
