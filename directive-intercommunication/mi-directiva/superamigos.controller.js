@@ -7,16 +7,13 @@
 	function SuperAmigos($log, $scope){		
 		$scope.superamigos = [];					
 		this.addBatman = function(){
-			$log.debug('Batman');
-			//$scope.superamigos.push('Bruno Díaz : Batman');
+			$scope.superamigos.push('Bruno Díaz : Batman');
 		};
-		this.addFlash = function(){	
-			$log.debug('Flash');		
-			//$scope.superamigos.push('Barry Allen : Flash');
+		this.addFlash = function(){
+			$scope.superamigos.push('Barry Allen : Flash');
 		};
-		this.addSuperman = function(){	
-			$log.debug('Superman');		
-			//$scope.superamigos.push('Clark Kent : Superman');
+		this.addSuperman = function(){
+			$scope.superamigos.push('Clark Kent : Superman');
 		};					
 	}
 })();

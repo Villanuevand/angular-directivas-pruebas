@@ -4,30 +4,31 @@
 	angular
 		.module('app.midirectiva',[])
 		.directive('superAmigos',SuperAmigos)		
-		.directive('Batman',Batman)
-		.directive('Flash',Flash)
-		.directive('Superman',Superman);
+		.directive('batman',Batman)
+		.directive('flash',Flash)
+		.directive('superman',Superman);
 	// Directiva SuperAmigos
 	SuperAmigos.$injector = ['$log'];
 	function SuperAmigos ($log){
 		var directiva = {
-			restrict : 'E',	
-			controller : 'SuperAmigosController',			
+			restrict : 'E',
+            scope: {},
+			controller : 'SuperAmigosController',
 			link : 	function (scope, element, attrs){
-				element.bind('mouseenter', function(){
+				element.on('mouseenter', function(){
 					// $scope.superamigos en SuperAmigos
-					$log.debug(scope.superamigos);				
+					$log.debug(scope.superamigos);
 				});
 			}
 		};
-		return directiva;	
+		return directiva;
 	}
 	
 	// Batman	
 	function Batman (){
 		return {						
 			require : 'superAmigos',
-			link : function (scope ,element ,attrs ,SuperAmigosController) {			
+			link : function (scope ,element ,attrs ,SuperAmigosController) {
 				SuperAmigosController.addBatman();
 			}
 		};		
